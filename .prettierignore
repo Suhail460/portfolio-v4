@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+
+# Allow specific files needed in the repo root
+!.gitignore
+!.prettierrc.json
+!.prettierignore
+!.editorconfig
+!.nvmrc

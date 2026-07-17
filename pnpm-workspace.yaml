@@ -1,0 +1,8 @@
+packages:
+  - "."
+
+# pnpm 11 requires build-script approvals here (not .npmrc/package.json).
+# sharp (Next image opt) and unrs-resolver (TS-aware ESLint imports) need native builds.
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
