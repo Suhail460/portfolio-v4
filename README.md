@@ -1,2 +1,15 @@
-# portfolio-v4
-My AI-native Product Manager portfolio built with Next.js 15, TypeScript, Tailwind CSS, React Three Fiber, and OpenCode.
+# Portfolio V4
+
+AI-native Product Manager Portfolio.
+
+Status: Planning
+
+Implementation begins after repository bootstrap.
+
+Built using
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- React Three Fiber
+- Framer Motion
