@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
-html {
-  font-family: system-ui, -apple-system, sans-serif;
-}
+@import "./tokens.css";
+@import "./theme.css";
+@import "./utilities.css";

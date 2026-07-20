@@ -1,0 +1,47 @@
+/* Theme wiring: turns semantic tokens into Tailwind utilities and sets base
+ * element styles. Components consume `bg-background`, `text-foreground`,
+ * `border-border`, `text-accent`, `font-sans`, etc. — never raw hex.
+ */
+
+/* Class-based dark mode toggle (overrides the default media-query behavior). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Map semantic CSS variables to Tailwind theme keys. `inline` makes the
+ * generated utility reference the runtime var, so it switches with the theme. */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --ease-standard: var(--ease-standard);
+  --duration-fast: var(--duration-fast);
+  --duration-base: var(--duration-base);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: light dark;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
