@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { Heading } from "@/components/ui/heading";
+import { revealTransition, revealOffset } from "@/lib/motion";
 import { Text } from "@/components/ui/text";
 import { Badge } from "@/components/ui/badge";
 import { Stack } from "@/components/ui/stack";
@@ -27,9 +28,9 @@ export function Hero() {
       />
       <Container className="py-[var(--spacing-section)]">
         <motion.div
-          initial={reduce ? false : { opacity: 0, y: 16 }}
+          initial={reduce ? false : { opacity: 0, y: revealOffset }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={revealTransition}
         >
           <Badge variant="accent" className="mb-6">
             <span className="mr-1.5 inline-block h-2 w-2 rounded-full bg-green-500" />

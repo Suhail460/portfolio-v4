@@ -55,6 +55,16 @@ export type CaseStudiesContent = {
   studies: CaseStudyPreview[];
 };
 
+export type DiscoveryDojoItem = {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  metrics: Array<{ label: string; value: string }>;
+  links: Array<{ label: string; href: string; external?: boolean }>;
+  imagePlaceholder: { alt: string; color: string };
+};
+
 export type DiscoveryDojoContent = {
   sectionTitle: string;
   sectionSubtitle: string;
@@ -63,6 +73,7 @@ export type DiscoveryDojoContent = {
   ctaLabel: string;
   ctaHref: string;
   artworkPlaceholder: { alt: string; color: string };
+  items: DiscoveryDojoItem[];
 };
 
 export type ContactContent = {
@@ -72,4 +83,38 @@ export type ContactContent = {
   linkedin: { label: string; href: string };
   github: { label: string; href: string };
   cta: { label: string; href: string };
+};
+
+export type CaseStudyMetric = { label: string; value: string };
+
+export type CaseStudyPersona = {
+  name: string;
+  role: string;
+  quote: string;
+};
+
+export type CaseStudySection = {
+  id: string;
+  heading: string;
+  body: string;
+  /** Optional list of supporting bullet points. */
+  points?: string[];
+};
+
+export type CaseStudy = {
+  slug: string;
+  title: string;
+  summary: string;
+  tags: string[];
+  heroImage: { alt: string; color: string };
+  problem: CaseStudySection;
+  research: CaseStudySection;
+  jtbd: CaseStudySection;
+  personas: CaseStudyPersona[];
+  metrics: CaseStudyMetric[];
+  solution: CaseStudySection;
+  outcome: CaseStudySection;
+  learnings: CaseStudySection;
+  ctaLabel: string;
+  ctaHref: string;
 };

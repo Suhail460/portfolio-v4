@@ -12,6 +12,7 @@ import { Stack } from "@/components/ui/stack";
 import { Grid } from "@/components/ui/grid";
 import { caseStudiesContent } from "@/content/data/case-studies";
 import { SectionHeading } from "./section-heading";
+import { revealTransition, revealOffset } from "@/lib/motion";
 
 export function CaseStudiesPreview() {
   const reduce = useReducedMotion();
@@ -28,10 +29,10 @@ export function CaseStudiesPreview() {
           {caseStudiesContent.studies.map((study, i) => (
             <motion.div
               key={study.id}
-              initial={reduce ? false : { opacity: 0, y: 16 }}
+              initial={reduce ? false : { opacity: 0, y: revealOffset }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.4, delay: i * 0.05, ease: "easeOut" }}
+              transition={{ ...revealTransition, delay: i * 0.05 }}
             >
               <Card interactive className="flex h-full flex-col overflow-hidden">
                 <div
@@ -41,7 +42,7 @@ export function CaseStudiesPreview() {
                   aria-label={study.imagePlaceholder.alt}
                 />
                 <Stack gap="sm" className="flex-1 p-6">
-                  <Heading level={4}>{study.title}</Heading>
+                  <Heading level={3}>{study.title}</Heading>
                   <Text variant="muted">{study.summary}</Text>
                   <Stack direction="row" gap="xs" wrap className="mt-2">
                     {study.tags.map((tag) => (

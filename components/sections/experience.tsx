@@ -11,6 +11,7 @@ import { Stack } from "@/components/ui/stack";
 import { Divider } from "@/components/ui/divider";
 import { experienceContent } from "@/content/data/experience";
 import { SectionHeading } from "./section-heading";
+import { revealTransition, revealOffset } from "@/lib/motion";
 
 export function Experience() {
   const reduce = useReducedMotion();
@@ -27,10 +28,10 @@ export function Experience() {
           {experienceContent.items.map((item, i) => (
             <motion.div
               key={item.id}
-              initial={reduce ? false : { opacity: 0, y: 16 }}
+              initial={reduce ? false : { opacity: 0, y: revealOffset }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.4, delay: i * 0.05, ease: "easeOut" }}
+              transition={{ ...revealTransition, delay: i * 0.05 }}
             >
               <Card className="p-6 md:p-8">
                 <Stack gap="md">

@@ -40,6 +40,19 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: site.name,
+              url: site.url,
+              description: site.description,
+              sameAs: site.social.map((s) => s.url),
+            }),
+          }}
+        />
         <AppShell>{children}</AppShell>
       </body>
     </html>
