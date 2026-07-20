@@ -2,34 +2,48 @@ import type { CaseStudiesContent } from "@/types/content";
 
 export const caseStudiesContent: CaseStudiesContent = {
   sectionTitle: "Case Studies",
-  sectionSubtitle: "Deep dives on shipped AI products — problem, process, decisions, and measurable outcomes.",
+  sectionSubtitle:
+    "Selective, high-signal product work — strategy, growth, research, and teardown. Each is a different lens on the same craft.",
   studies: [
     {
-      id: "radar-platforms",
-      title: "Radar for Platforms — Multi-Tenant ML at Scale",
-      summary: "Enabled 1,200+ marketplaces to run custom fraud models on shared infrastructure without ML expertise.",
-      tags: ["ML Platform", "Multi-Tenant", "Fraud", "Stripe"],
+      id: "youtube-premium",
+      title: "YouTube Premium Membership Strategy",
+      summary:
+        "Reframed Premium from a price object into a layered membership built on viewing intent and willingness to pay.",
+      tags: ["Product Strategy", "Monetization"],
       ctaLabel: "Read Case Study",
-      ctaHref: "/case-studies/radar-platforms",
-      imagePlaceholder: { alt: "Radar for Platforms architecture diagram", color: "#3B82F6" },
+      ctaHref: "/case-studies/youtube-premium",
+      imagePlaceholder: { alt: "YouTube Premium membership strategy", color: "#FF0000" },
     },
     {
-      id: "github-actions-marketplace",
-      title: "GitHub Actions Marketplace — Developer Ecosystem at Scale",
-      summary: "Built the discovery, monetization, and analytics layer for 10,000+ reusable workflows and 3M+ monthly active developers.",
-      tags: ["Marketplace", "DevEx", "Platform", "GitHub"],
+      id: "ola-retention",
+      title: "Ola User Retention",
+      summary:
+        "Rebuilt retention as a lifecycle loop — turning the first-to-second ride into the core growth engine.",
+      tags: ["Growth Product", "Retention"],
       ctaLabel: "Read Case Study",
-      ctaHref: "/case-studies/github-actions",
-      imagePlaceholder: { alt: "GitHub Actions Marketplace dashboard", color: "#8B5CF6" },
+      ctaHref: "/case-studies/ola-retention",
+      imagePlaceholder: { alt: "Ola user retention growth journey", color: "#F7B500" },
     },
     {
-      id: "stealth-ai-agents",
-      title: "Enterprise AI Agent Platform — 0 to $2.4M ARR",
-      summary: "Designed and shipped a multi-tenant RAG platform with eval-driven development, serving 500K+ docs/day across 12 enterprise customers.",
-      tags: ["RAG", "AI Agents", "Eval-Driven", "0→1"],
+      id: "whatsapp-status",
+      title: "WhatsApp Status Research",
+      summary:
+        "A JTBD study on why people post Status — separating the job of broadcasting from the job of belonging.",
+      tags: ["User Research", "JTBD"],
       ctaLabel: "Read Case Study",
-      ctaHref: "/case-studies/stealth-ai",
-      imagePlaceholder: { alt: "AI Agent Platform architecture", color: "#10B981" },
+      ctaHref: "/case-studies/whatsapp-status",
+      imagePlaceholder: { alt: "WhatsApp Status JTBD research", color: "#25D366" },
+    },
+    {
+      id: "cred-coins",
+      title: "CRED Coins Feature Teardown",
+      summary:
+        "Reverse-engineered how a rewards layer quietly became the behavioural engine of an entire app.",
+      tags: ["Product Teardown", "Reverse Engineering"],
+      ctaLabel: "Read Case Study",
+      ctaHref: "/case-studies/cred-coins",
+      imagePlaceholder: { alt: "CRED Coins feature teardown", color: "#1B1B1B" },
     },
   ],
 };

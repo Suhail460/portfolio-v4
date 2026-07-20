@@ -101,20 +101,39 @@ export type CaseStudySection = {
   points?: string[];
 };
 
+/** Flexible, ordered storytelling blocks. Lets each case study define its own
+ *  narrative order while reusing the same visual language. */
+export type CaseStudyBlock =
+  | { kind: "narrative"; id: string; heading: string; body: string; points?: string[] }
+  | { kind: "metrics"; id: string; heading?: string; metrics: CaseStudyMetric[] }
+  | { kind: "personas"; id: string; heading?: string; personas: CaseStudyPersona[] }
+  | {
+      kind: "framework";
+      id: string;
+      heading: string;
+      body: string;
+      /** Named framework steps/cards (e.g. Opportunity Solution Tree). */
+      cards?: Array<{ title: string; description: string }>;
+    }
+  | {
+      kind: "download";
+      id: string;
+      heading: string;
+      body: string;
+      label: string;
+      href: string;
+    };
+
 export type CaseStudy = {
   slug: string;
   title: string;
   summary: string;
+  category: string;
+  theme: string;
   tags: string[];
   heroImage: { alt: string; color: string };
-  problem: CaseStudySection;
-  research: CaseStudySection;
-  jtbd: CaseStudySection;
-  personas: CaseStudyPersona[];
-  metrics: CaseStudyMetric[];
-  solution: CaseStudySection;
-  outcome: CaseStudySection;
-  learnings: CaseStudySection;
+  /** Ordered storytelling blocks — order varies per project. */
+  sections: CaseStudyBlock[];
   ctaLabel: string;
   ctaHref: string;
 };

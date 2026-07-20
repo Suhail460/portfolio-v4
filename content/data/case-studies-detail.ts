@@ -1,264 +1,278 @@
 import type { CaseStudy } from "@/types/content";
 
 export const caseStudies: Record<string, CaseStudy> = {
-  "radar-platforms": {
-    slug: "radar-platforms",
-    title: "Radar for Platforms — Multi-Tenant ML at Scale",
+  "youtube-premium": {
+    slug: "youtube-premium",
+    title: "YouTube Premium Membership Strategy",
     summary:
-      "Enabled 1,200+ marketplaces to run custom fraud models on shared infrastructure without ML expertise.",
-    tags: ["ML Platform", "Multi-Tenant", "Fraud", "Stripe"],
-    heroImage: { alt: "Radar for Platforms architecture diagram", color: "#3B82F6" },
-    problem: {
-      id: "problem",
-      heading: "The Problem",
-      body: "Marketplaces on the platform were losing millions to fraud but lacked the data science talent to build custom models. Generic, one-size-fits-all fraud detection left high-risk segments unprotected.",
-      points: [
-        "1,200+ marketplaces with wildly different risk profiles.",
-        "No in-house ML expertise among marketplace operators.",
-        "Generic models produced high false positives on legit sellers.",
-      ],
-    },
-    research: {
-      id: "research",
-      heading: "Research",
-      body: "We interviewed 40 marketplace operators and analyzed 18 months of chargeback data to map where generic models failed and which signals were universally predictive.",
-      points: [
-        "Diary studies with 12 high-volume marketplace operators.",
-        "Chargeback root-cause analysis across 3 verticals.",
-        "Signal feasibility audit with the risk engineering team.",
-      ],
-    },
-    jtbd: {
-      id: "jtbd",
-      heading: "Jobs To Be Done",
-      body: "When a marketplace operator detects rising fraud, they want to deploy a model tuned to their category — without hiring a data science team — so they can protect revenue and seller trust.",
-      points: [
-        "Deploy category-specific fraud models in minutes, not quarters.",
-        "Trust the system without understanding the math.",
-        "Scale protection as the marketplace grows.",
-      ],
-    },
-    personas: [
+      "A monetization strategy that reframed Premium from a price object into a layered membership built around viewing intent and willingness to pay.",
+    category: "Product Strategy",
+    theme: "Monetization",
+    tags: ["Monetization", "Pricing", "Subscriptions", "Strategy"],
+    heroImage: { alt: "YouTube Premium membership strategy", color: "#FF0000" },
+    sections: [
       {
-        name: "Priya",
-        role: "Marketplace Operator, Mid-Market",
-        quote: "I need protection that understands my sellers, not a generic black box.",
+        kind: "narrative",
+        id: "executive-summary",
+        heading: "Executive Summary",
+        body: "YouTube Premium was treated as a single price point competing on ad-removal alone. I reframed the membership around viewer segments and willingness to pay, designing a layered value proposition that tied features to intent rather than discounting.",
+        points: [
+          "Segmented the base by viewing behaviour, not demographics.",
+          "Mapped willingness to pay against feature bundles.",
+          "Reframed the value narrative from 'no ads' to 'uninterrupted ownership of your time'.",
+        ],
       },
       {
-        name: "Daniel",
-        role: "Risk Engineering Lead",
-        quote: "I need a platform that lets me ship models to customers without bespoke builds.",
+        kind: "framework",
+        id: "strategy-framework",
+        heading: "Strategy Narrative",
+        body: "The strategy used a simple value-mapping framework: anchor, wedge, and expand. Anchor on the core job (uninterrupted viewing), wedge into adjacent jobs (offline, background play), and expand into ecosystem lock-in.",
+        cards: [
+          { title: "Anchor", description: "Own the core job: uninterrupted, background, and offline viewing." },
+          { title: "Wedge", description: "Enter adjacent jobs with low marginal cost and high perceived value." },
+          { title: "Expand", description: "Deepen ecosystem lock-in through cross-product membership." },
+        ],
+      },
+      {
+        kind: "narrative",
+        id: "approach",
+        heading: "Approach",
+        body: "I ran the work as a strategy narrative: articulate the belief, stress-test it against churn data, and translate it into a pricing architecture the monetization and growth teams could execute without re-litigating the premise each quarter.",
+      },
+      {
+        kind: "metrics",
+        id: "outcomes",
+        heading: "Outcomes",
+        metrics: [
+          { label: "Strategic framing", value: "Membership, not discount" },
+          { label: "Segment lens", value: "Behaviour-based" },
+          { label: "Value story", value: "Time ownership" },
+        ],
+      },
+      {
+        kind: "narrative",
+        id: "reflection",
+        heading: "Reflection",
+        body: "The lesson was that monetization strategy is mostly narrative discipline — once the value story is coherent, pricing and packaging follow. Fighting churn with discounts only erodes the premise.",
+      },
+      {
+        kind: "download",
+        id: "source",
+        heading: "Original Document",
+        body: "Read the full strategy narrative, including the pricing architecture and segmentation logic.",
+        label: "View Strategy Document",
+        href: "https://github.com/suhail460/discovery-dojo",
       },
     ],
-    metrics: [
-      { label: "Marketplaces served", value: "1,200+" },
-      { label: "Year 1 ARR", value: "$40M" },
-      { label: "False positive drop", value: "34%" },
-    ],
-    solution: {
-      id: "solution",
-      heading: "The Solution",
-      body: "A multi-tenant ML platform that auto-trains category-specific models on shared infrastructure, exposing them through a single API with self-serve monitoring.",
-      points: [
-        "Automated per-marketplace model training and deployment.",
-        "Shared feature store with tenant isolation.",
-        "Self-serve dashboards for non-ML operators.",
-      ],
-    },
-    outcome: {
-      id: "outcome",
-      heading: "The Outcome",
-      body: "Radar for Platforms became a $40M ARR line in its first year, adopted by 1,200+ marketplaces, while reducing false positives 34% versus the generic model.",
-      points: [
-        "$40M ARR in Year 1.",
-        "1,200+ marketplaces onboarded.",
-        "34% fewer false positives, 12% more fraud caught.",
-      ],
-    },
-    learnings: {
-      id: "learnings",
-      heading: "Learnings",
-      body: "Tenant isolation and explainability mattered more than raw model accuracy for operator trust. Self-serve observability was the unlock for non-ML adoption.",
-      points: [
-        "Trust beats accuracy for non-technical operators.",
-        "Observability is a feature, not a nice-to-have.",
-        "Shared infra with strong isolation scales economics.",
-      ],
-    },
     ctaLabel: "Explore the Discovery Dojo",
     ctaHref: "https://github.com/suhail460/discovery-dojo",
   },
-  "github-actions": {
-    slug: "github-actions",
-    title: "GitHub Actions Marketplace — Developer Ecosystem at Scale",
+
+  "ola-retention": {
+    slug: "ola-retention",
+    title: "Ola User Retention",
     summary:
-      "Built the discovery, monetization, and analytics layer for 10,000+ reusable workflows and 3M+ monthly active developers.",
-    tags: ["Marketplace", "DevEx", "Platform", "GitHub"],
-    heroImage: { alt: "GitHub Actions Marketplace dashboard", color: "#8B5CF6" },
-    problem: {
-      id: "problem",
-      heading: "The Problem",
-      body: "Action publishers had no discovery surface and developers struggled to find trusted, reusable automation. CI config duplication was rampant across the ecosystem.",
-      points: [
-        "No central discovery for 10,000+ community actions.",
-        "Publishers lacked analytics and monetization.",
-        "68% of repos duplicated common CI configuration.",
-      ],
-    },
-    research: {
-      id: "research",
-      heading: "Research",
-      body: "We surveyed 600 developers and instrumented marketplace search to understand discovery drop-off and what drove action adoption.",
-      points: [
-        "Developer surveys on discovery pain points.",
-        "Search funnel instrumentation.",
-        "Publisher interviews on monetization needs.",
-      ],
-    },
-    jtbd: {
-      id: "jtbd",
-      heading: "Jobs To Be Done",
-      body: "When a developer automates a workflow, they want to find a trusted, reusable action in seconds — without writing boilerplate — so they can ship faster.",
-      points: [
-        "Discover trusted actions without vetting from scratch.",
-        "Reuse instead of reinventing CI config.",
-        "Publish and measure their own actions.",
-      ],
-    },
-    personas: [
+      "A retention strategy for ride-hailing that moved the metric from acquisition-dependent growth to habit-forming, lifecycle-aware engagement.",
+    category: "Growth Product",
+    theme: "Retention",
+    tags: ["Retention", "Lifecycle", "Growth", "Engagement"],
+    heroImage: { alt: "Ola user retention growth journey", color: "#F7B500" },
+    sections: [
       {
-        name: "Maya",
-        role: "Staff Engineer",
-        quote: "I want to reuse a vetted action, not paste YAML I don't fully understand.",
+        kind: "narrative",
+        id: "executive-summary",
+        heading: "Executive Summary",
+        body: "Retention was being managed as a post-acquisition afterthought. I repositioned it as the core growth loop — every cohort's second and third ride determined lifetime value far more than the first.",
+        points: [
+          "Diagnosed the retention cliff at the first-to-second ride transition.",
+          "Built a lifecycle map of rider states, not a single DAU metric.",
+          "Shifted spend from blast campaigns to triggered, state-based nudges.",
+        ],
       },
       {
-        name: "Leo",
-        role: "OSS Maintainer",
-        quote: "I need analytics to know if my action is actually helping people.",
+        kind: "framework",
+        id: "growth-journey",
+        heading: "Growth Journey",
+        body: "The work followed a habit-formation loop: trigger, action, reward, investment. Each stage had a defined owner and a leading indicator so retention became an operational metric, not a quarterly surprise.",
+        cards: [
+          { title: "Trigger", description: "Contextual, not promotional — tied to real trip intent." },
+          { title: "Action", description: "One-tap rebooking that removes friction from repeat rides." },
+          { title: "Reward", description: "Perceived value that compounds with each successful trip." },
+          { title: "Investment", description: "Saved places and preferences that raise switching cost." },
+        ],
+      },
+      {
+        kind: "narrative",
+        id: "insights",
+        heading: "Insights",
+        body: "The biggest unlock was separating activation from retention. Riders who hit a 'second ride within 7 days' threshold behaved like retained users; the entire lifecycle program was rebuilt around crossing that line.",
+      },
+      {
+        kind: "metrics",
+        id: "outcomes",
+        heading: "Outcomes",
+        metrics: [
+          { label: "Primary lever", value: "2nd-ride in 7d" },
+          { label: "Operating model", value: "Lifecycle states" },
+          { label: "Campaign shift", value: "Triggered nudges" },
+        ],
+      },
+      {
+        kind: "narrative",
+        id: "reflection",
+        heading: "Reflection",
+        body: "Retention is a system, not a screen. Once the lifecycle states were explicit, every team could see which lever they owned — and the metric stopped being the growth team's alone to carry.",
+      },
+      {
+        kind: "download",
+        id: "source",
+        heading: "Original Document",
+        body: "Read the full retention teardown, including the lifecycle map and trigger design.",
+        label: "View Retention Study",
+        href: "https://github.com/suhail460/discovery-dojo",
       },
     ],
-    metrics: [
-      { label: "Monthly active devs", value: "3M+" },
-      { label: "Reusable workflows", value: "10k+" },
-      { label: "CI duplication cut", value: "68%" },
-    ],
-    solution: {
-      id: "solution",
-      heading: "The Solution",
-      body: "A marketplace with search, categories, verified badges, publisher analytics, and reusable workflows plus composite actions.",
-      points: [
-        "Search and category-based discovery.",
-        "Verified publisher program with analytics.",
-        "Reusable workflows and composite actions.",
-      ],
-    },
-    outcome: {
-      id: "outcome",
-      heading: "The Outcome",
-      body: "The marketplace became the default discovery surface for millions of developers and cut CI config duplication by 68% across adopters.",
-      points: [
-        "3M+ monthly active developers.",
-        "10,000+ reusable workflows published.",
-        "68% reduction in duplicated CI config.",
-      ],
-    },
-    learnings: {
-      id: "learnings",
-      heading: "Learnings",
-      body: "Trust signals (verified badges) drove adoption more than raw search relevance. Publisher analytics created a virtuous content loop.",
-      points: [
-        "Verified trust > ranking tweaks.",
-        "Creator analytics fuel a content flywheel.",
-        "Reuse beats reinvention for platform velocity.",
-      ],
-    },
     ctaLabel: "Explore the Discovery Dojo",
     ctaHref: "https://github.com/suhail460/discovery-dojo",
   },
-  "stealth-ai": {
-    slug: "stealth-ai",
-    title: "Enterprise AI Agent Platform — 0 to $2.4M ARR",
+
+  "whatsapp-status": {
+    slug: "whatsapp-status",
+    title: "WhatsApp Status Research",
     summary:
-      "Designed and shipped a multi-tenant RAG platform with eval-driven development, serving 500K+ docs/day across 12 enterprise customers.",
-    tags: ["RAG", "AI Agents", "Eval-Driven", "0→1"],
-    heroImage: { alt: "AI Agent Platform architecture", color: "#10B981" },
-    problem: {
-      id: "problem",
-      heading: "The Problem",
-      body: "Enterprises wanted AI agents on their private data but had no safe, governed way to deploy RAG at scale, and quality regressed silently after every prompt change.",
-      points: [
-        "No governed path to deploy RAG on private data.",
-        "Silent quality regressions on prompt edits.",
-        "Multi-tenant isolation and cost concerns.",
-      ],
-    },
-    research: {
-      id: "research",
-      heading: "Research",
-      body: "We ran design partnerships with 4 enterprises to map data governance constraints, latency budgets, and what 'good' looked like per domain.",
-      points: [
-        "Design partnerships with 4 enterprise customers.",
-        "Latency and cost budget modelling.",
-        "Quality regression post-mortems.",
-      ],
-    },
-    jtbd: {
-      id: "jtbd",
-      heading: "Jobs To Be Done",
-      body: "When an enterprise ships an AI agent, they want it grounded in their data and safe to change — without a research team — so they can realize value fast.",
-      points: [
-        "Deploy grounded agents on private data.",
-        "Change prompts without breaking quality.",
-        "Scale across teams with governance.",
-      ],
-    },
-    personas: [
+      "A Jobs-To-Be-Done research study on why people post Status — turning an ambiguous behaviour into a sharp product thesis.",
+    category: "User Research",
+    theme: "JTBD",
+    tags: ["User Research", "JTBD", "Qualitative", "Insights"],
+    heroImage: { alt: "WhatsApp Status JTBD research", color: "#25D366" },
+    sections: [
       {
-        name: "Aisha",
-        role: "VP Engineering, Enterprise",
-        quote: "I need to change a prompt and trust nothing silently broke.",
+        kind: "narrative",
+        id: "executive-summary",
+        heading: "Executive Summary",
+        body: "Status looked like 'stories' on the surface, but the underlying jobs were social, not performative. The research separated the job of broadcasting from the job of belonging, and that distinction changed what 'success' meant for the feature.",
+        points: [
+          "Ran JTBD interviews rather than feature surveys.",
+          "Separated expressive posting from passive belonging.",
+          "Reframed success metrics around the job, not the tap.",
+        ],
       },
       {
-        name: "Tom",
-        role: "Platform PM",
-        quote: "I need evals in CI so regressions never reach customers.",
+        kind: "personas",
+        id: "personas",
+        heading: "Voices from the Research",
+        personas: [
+          {
+            name: "The Broadcaster",
+            role: "Wants to be seen without being performative",
+            quote: "I post so the right people know I'm here — not for everyone.",
+          },
+          {
+            name: "The Belonger",
+            role: "Wants quiet presence in close circles",
+            quote: "Status is how I stay close without starting a conversation.",
+          },
+        ],
+      },
+      {
+        kind: "narrative",
+        id: "method",
+        heading: "Research Method",
+        body: "The study used a Jobs-To-Be-Done lens: for each posting moment, we asked what the person was really trying to do, what they used before, and what would have kept them from posting. Themes emerged across 20+ interviews and were validated against support threads.",
+      },
+      {
+        kind: "narrative",
+        id: "insights",
+        heading: "Key Insights",
+        body: "The 'audience' of a Status is almost never the poster's full contact list. Privacy and perceived audience were the true product surface — not the camera. Any improvement that ignored the audience question missed the job.",
+      },
+      {
+        kind: "metrics",
+        id: "outcomes",
+        heading: "Outcomes",
+        metrics: [
+          { label: "Method", value: "JTBD interviews" },
+          { label: "Core job split", value: "Express / Belong" },
+          { label: "True surface", value: "Perceived audience" },
+        ],
+      },
+      {
+        kind: "download",
+        id: "source",
+        heading: "Original Document",
+        body: "This study is sourced from an existing Notion document. Read the full JTBD write-up.",
+        label: "Read the Notion Document",
+        href: "https://github.com/suhail460/discovery-dojo",
       },
     ],
-    metrics: [
-      { label: "ARR achieved", value: "$2.4M" },
-      { label: "Enterprise customers", value: "12" },
-      { label: "Docs processed/day", value: "500K+" },
+    ctaLabel: "Explore the Discovery Dojo",
+    ctaHref: "https://github.com/suhail460/discovery-dojo",
+  },
+
+  "cred-coins": {
+    slug: "cred-coins",
+    title: "CRED Coins Feature Teardown",
+    summary:
+      "A reverse-engineering teardown of CRED Coins — how a rewards layer quietly became the behavioural engine of the entire app.",
+    category: "Product Teardown",
+    theme: "Reverse Engineering",
+    tags: ["Teardown", "Gamification", "Rewards", "Analysis"],
+    heroImage: { alt: "CRED Coins feature teardown", color: "#1B1B1B" },
+    sections: [
+      {
+        kind: "narrative",
+        id: "executive-summary",
+        heading: "Executive Summary",
+        body: "CRED Coins looks like a loyalty program. Reverse-engineering it shows something sharper: a behavioural engine that converts a billing moment into a daily engagement loop, using scarcity, variable reward, and status to keep users returning long after the bill is paid.",
+        points: [
+          "Mapped the reward loop against CRED's actual engagement goals.",
+          "Identified scarcity and variable reward as the core mechanics.",
+          "Showed how a 'billing app' became a daily habit surface.",
+        ],
+      },
+      {
+        kind: "framework",
+        id: "analysis",
+        heading: "Analytical Narrative",
+        body: "The teardown uses a loop-analysis lens: trigger, action, variable reward, investment — and then asks what each step is really optimising for. The answer is rarely 'loyalty'; it is 'frequency of return'.",
+        cards: [
+          { title: "Trigger", description: "Bill payment creates a natural, recurring entry point." },
+          { title: "Action", description: "Spending coins is low-friction and instantly gratifying." },
+          { title: "Variable Reward", description: "Raffles and drops create intermittent, addictive payoffs." },
+          { title: "Investment", description: "Status tiers raise the cost of leaving the ecosystem." },
+        ],
+      },
+      {
+        kind: "narrative",
+        id: "insights",
+        heading: "Insights",
+        body: "The genius is invisibility. Users experience 'rewards', not 'manipulation' — because the mechanics are wrapped in genuine value (prizes, donations, cashback). The teardown separates the wrapper from the engine.",
+      },
+      {
+        kind: "narrative",
+        id: "recommendations",
+        heading: "Recommendations",
+        body: "For teams copying the pattern: lead with real value, then layer mechanics. A rewards loop without underlying value is a treadmill; CRED's works because the bill-payment job is already strong.",
+      },
+      {
+        kind: "metrics",
+        id: "outcomes",
+        heading: "Outcomes",
+        metrics: [
+          { label: "Decomposition", value: "Loop-first" },
+          { label: "Core mechanic", value: "Variable reward" },
+          { label: "Takeaway", value: "Value first" },
+        ],
+      },
+      {
+        kind: "download",
+        id: "source",
+        heading: "Original Document",
+        body: "Read the full teardown, including the loop map and mechanic-by-mechanic analysis.",
+        label: "View Teardown",
+        href: "https://github.com/suhail460/discovery-dojo",
+      },
     ],
-    solution: {
-      id: "solution",
-      heading: "The Solution",
-      body: "A multi-tenant RAG platform with eval-driven development: prompts ship only when evals pass in CI, with per-tenant isolation and a p95 latency budget under 200ms.",
-      points: [
-        "Eval harness gating every prompt change in CI.",
-        "Per-tenant data isolation.",
-        "p95 latency budget under 200ms.",
-      ],
-    },
-    outcome: {
-      id: "outcome",
-      heading: "The Outcome",
-      body: "The platform reached $2.4M ARR across 12 enterprise customers while serving 500K+ documents/day with stable quality via eval gates.",
-      points: [
-        "$2.4M ARR, 12 enterprise customers.",
-        "500K+ docs/day at <200ms p95.",
-        "Zero silent quality regressions post-launch.",
-      ],
-    },
-    learnings: {
-      id: "learnings",
-      heading: "Learnings",
-      body: "Eval-driven development was the unlock: it turned prompt changes from risky art into a safe, reviewable engineering practice.",
-      points: [
-        "Evals in CI > post-hoc monitoring.",
-        "Latency budgets are a product constraint, not infra detail.",
-        "Isolation enables enterprise trust.",
-      ],
-    },
     ctaLabel: "Explore the Discovery Dojo",
     ctaHref: "https://github.com/suhail460/discovery-dojo",
   },

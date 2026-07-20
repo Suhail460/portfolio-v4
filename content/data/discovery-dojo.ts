@@ -3,10 +3,10 @@ import type { DiscoveryDojoContent } from "@/types/content";
 export const discoveryDojoContent: DiscoveryDojoContent = {
   sectionTitle: "Discovery Dojo",
   sectionSubtitle:
-    "Where product thinking meets AI experimentation. Open-source tools, frameworks, and mental models I build in public.",
+    "My signature initiative — where product discovery meets AI-assisted thinking. Tools, frameworks, and mental models I build in public.",
   title: "Discovery Dojo",
   description:
-    "A growing collection of eval harnesses, prompt engineering patterns, RAG benchmarks, and PM frameworks for AI-native teams. Everything is MIT-licensed and battle-tested in production.",
+    "The place where I practice the craft out loud: discovery workflows, research methods, problem framing, and continuous learning — accelerated by AI. Open-source, and built from the same habits I bring to every product role.",
   ctaLabel: "Explore the Dojo",
   ctaHref: "https://github.com/suhail460/discovery-dojo",
   artworkPlaceholder: { alt: "Discovery Dojo terminal-style illustration", color: "#F59E0B" },

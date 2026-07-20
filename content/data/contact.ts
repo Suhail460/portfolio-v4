@@ -2,7 +2,8 @@ import type { ContactContent } from "@/types/content";
 
 export const contactContent: ContactContent = {
   sectionTitle: "Contact",
-  sectionSubtitle: "Building something AI-native? I'm open to advisory, angel investing, and strategic conversations.",
+  sectionSubtitle:
+    "Hiring for an AI-native product role, or building something customers will love? I'd love to talk.",
   email: { label: "Email", address: "suhail@suhail.pk", href: "mailto:suhail@suhail.pk" },
   linkedin: { label: "LinkedIn", href: "https://linkedin.com/in/suhail460" },
   github: { label: "GitHub", href: "https://github.com/suhail460" },

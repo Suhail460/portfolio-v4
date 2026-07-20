@@ -2,49 +2,71 @@ import type { CapabilitiesContent } from "@/types/content";
 
 export const capabilitiesContent: CapabilitiesContent = {
   sectionTitle: "Capabilities",
-  sectionSubtitle: "The product craft I bring to AI-native teams — strategy, execution, and org design.",
+  sectionSubtitle: "The product craft I bring — grounded in customer truth and sharpened by AI-native workflows.",
   capabilities: [
     {
-      id: "ai-strategy",
-      title: "AI Product Strategy",
-      description: "Translating LLM capabilities into defensible product moats. Model selection, eval design, RAG vs fine-tune tradeoffs, cost/latency/quality optimization.",
+      id: "product-discovery",
+      title: "Product Discovery",
+      description:
+        "Framing the right problem before building. Interviews, JTBD, and signal synthesis that turn ambiguity into a tested thesis.",
+      icon: "Compass",
+      tags: ["Interviews", "JTBD", "Problem Framing"],
+    },
+    {
+      id: "product-strategy",
+      title: "Product Strategy",
+      description:
+        "Connecting customer truth to business outcomes. Narratives, pricing, and positioning that teams can execute without re-litigating the premise.",
       icon: "Brain",
-      tags: ["LLM Ops", "Eval Harnesses", "RAG", "Agent Architecture"],
+      tags: ["Positioning", "Pricing", "Narrative"],
     },
     {
-      id: "zero-to-one",
-      title: "0 → 1 Product Building",
-      description: "Taking ambiguous problems to shipped products with paying customers. Discovery, pricing, GTM, and the grit to iterate past the first 100 users.",
-      icon: "Rocket",
-      tags: ["Discovery", "Pricing", "GTM", "PLG"],
+      id: "roadmapping",
+      title: "Roadmapping",
+      description:
+        "Turning strategy into a sequenced plan. Outcome-led roadmaps with clear tradeoffs, ownership, and a rhythm the whole team can trust.",
+      icon: "Map",
+      tags: ["Planning", "Prioritization", "OKRs"],
     },
     {
-      id: "platform-thinking",
-      title: "Platform & Developer Experience",
-      description: "Designing extensible platforms that developers love. API design, SDK strategy, marketplace dynamics, partner ecosystems, and self-serve adoption loops.",
-      icon: "Layers",
-      tags: ["API Design", "SDKs", "Marketplaces", "Partner Programs"],
+      id: "user-research",
+      title: "User Research",
+      description:
+        "Qualitative depth that earns conviction. From support signals to structured studies, I keep the customer's real job at the center.",
+      icon: "FlaskConical",
+      tags: ["Qualitative", "Synthesis", "Insights"],
     },
     {
-      id: "ml-product",
-      title: "ML-Powered Product Leadership",
-      description: "Bridging ML research and product value. Model governance, drift monitoring, automated retraining, A/B infrastructure, and responsible AI guardrails.",
-      icon: "BarChart2",
-      tags: ["Model Governance", "Drift Detection", "A/B Infra", "Responsible AI"],
+      id: "analytics",
+      title: "Analytics",
+      description:
+        "Moving past vanity metrics to leading indicators and cohort truth. The scoreboard that keeps product, support, and eng aligned.",
+      icon: "LineChart",
+      tags: ["Metrics", "Cohorts", "Experimentation"],
     },
     {
-      id: "org-design",
-      title: "PM Org Design & Culture",
-      description: "Building high-leverage product organizations. Career ladders, ritual design, OKR systems, hiring loops, and creating psychological safety for risk-taking.",
-      icon: "Users",
-      tags: ["Hiring", "Career Ladders", "Rituals", "OKRs"],
+      id: "ai-pm",
+      title: "AI-assisted Product Management",
+      description:
+        "Using LLMs as a thinking partner — research synthesis, spec drafting, and eval-minded thinking that compresses cycle time.",
+      icon: "Sparkles",
+      tags: ["LLM Workflows", "Synthesis", "Eval Thinking"],
     },
     {
-      id: "data-driven",
-      title: "Data-Informed Decision Making",
-      description: "Moving beyond vanity metrics. North Star metrics, leading indicators, cohort analysis, experimentation culture, and teaching teams to trust the data.",
-      icon: "TrendingUp",
-      tags: ["North Star", "Experimentation", "Cohorts", "Leading Indicators"],
+      id: "stakeholder",
+      title: "Stakeholder Management",
+      description:
+        "Aligning support, design, engineering, and business around one story. The bridge that turns friction into forward motion.",
+      icon: "Handshake",
+      tags: ["Alignment", "Communication", "Trust"],
+    },
+    {
+      id: "agile-delivery",
+      title: "Agile Delivery",
+      description:
+        "Lightweight rituals and predictable cadence. Shipping in small, safe increments with room to learn from real usage.",
+      icon: "Workflow",
+      tags: ["Rituals", "Iterative", "Delivery"],
     },
   ],
 };
