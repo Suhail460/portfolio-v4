@@ -67,6 +67,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
 export function useTheme(): ThemeContextValue {
   const ctx = useContext(ThemeContext);
-  if (!ctx) throw new Error("useTheme must be used within a ThemeProvider");
+  if (!ctx) {
+    // Fallback for pages outside ThemeProvider (e.g., _not-found)
+    return {
+      theme: "system",
+      resolvedTheme: "light",
+      setTheme: () => {},
+    };
+  }
   return ctx;
 }

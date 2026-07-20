@@ -1,6 +1,6 @@
 import type { SiteConfig, SocialLink } from "@/types/site";
 import { env } from "@/lib/env";
-import { NAV_ITEMS } from "@/lib/routes";
+import { NAV_SECTIONS } from "@/lib/routes";
 
 function buildSocial(): SocialLink[] {
   const links: SocialLink[] = [];
@@ -30,9 +30,10 @@ export const site: SiteConfig = {
   description: env.NEXT_PUBLIC_SITE_DESCRIPTION,
   author: env.NEXT_PUBLIC_SITE_NAME,
   social: buildSocial(),
-  nav: NAV_ITEMS.map((item) => ({
+  nav: NAV_SECTIONS.map((item) => ({
     label: item.label,
     href: item.href,
+    id: item.id,
   })),
 };
 

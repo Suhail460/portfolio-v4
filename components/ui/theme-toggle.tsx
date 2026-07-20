@@ -11,7 +11,10 @@ const options: { value: Theme; label: string; Icon: typeof Sun }[] = [
 ];
 
 export function ThemeToggle({ className }: { className?: string }) {
-  const { theme, setTheme } = useTheme();
+  const ctx = useTheme();
+  // Graceful fallback for pages without ThemeProvider (e.g., _not-found)
+  const theme = ctx?.theme ?? "system";
+  const setTheme = ctx?.setTheme ?? (() => {});
 
   return (
     <div
